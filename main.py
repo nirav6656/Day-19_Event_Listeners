@@ -1,16 +1,36 @@
-# This is a sample Python script.
+from turtle import Turtle, Screen
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# Made object named Sheru (my dog name)
+sheru = Turtle()
+screen = Screen()
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+sheru.pencolor("blue")
+sheru.width(3)
+def up():
+    sheru.setheading(90)
+    sheru.forward(20)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+def down():
+    sheru.setheading(270)
+    sheru.forward(20)
+
+
+def left():
+    sheru.setheading(180)
+    sheru.forward(20)
+
+
+def right():
+    sheru.setheading(360)
+    sheru.forward(20)
+
+
+screen.listen()
+screen.onkey(key="Up", fun=up)
+screen.onkey(key="Down", fun=down)
+screen.onkey(key="Left", fun=left)
+screen.onkey(key="Right", fun=right)
+
+screen.mainloop()
+screen.exitonclick()
